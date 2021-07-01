@@ -1,0 +1,23 @@
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    cursor: pointer;
+    border-style: none;
+    border-radius: 10px;
+    margin-left: 25px;
+}
+
+.form {
+    width: 700px;
+    background-color: #FAD316;
+}
+
+input {
+    border-style: none;
+    border-radius: 10px;
+}
+
+
