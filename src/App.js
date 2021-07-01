@@ -65,10 +65,10 @@ class App extends Component {
     }})
   }
 
-  componentDidMount() {
-    fetch('https://honest-goose-76701.herokuapp.com/')
-    .then(response => response.json())
-  }
+  // componentDidMount() {
+  //   fetch('https://honest-goose-76701.herokuapp.com/')
+  //   .then(response => response.json())
+  // }
 
   calculateFaceLocation = (data) => {
    const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
@@ -96,7 +96,7 @@ class App extends Component {
     app.models.predict('f76196b43bbd45c99b4f3cd8e8b40a8a', this.state.input)
     .then(response => {
         if (response) {
-          fetch('https://honest-goose-76701.herokuapp.com:3000/image', {
+          fetch('https://honest-goose-76701.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
