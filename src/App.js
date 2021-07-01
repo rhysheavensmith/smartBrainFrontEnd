@@ -66,7 +66,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/')
+    fetch('https://honest-goose-76701.herokuapp.com/')
     .then(response => response.json())
   }
 
@@ -96,7 +96,7 @@ class App extends Component {
     app.models.predict('f76196b43bbd45c99b4f3cd8e8b40a8a', this.state.input)
     .then(response => {
         if (response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://honest-goose-76701.herokuapp.com:3000/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
